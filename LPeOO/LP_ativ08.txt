@@ -1,3 +1,9 @@
+OBS: ESSA ATIVIDADE ESTAVA COM O LINK DA ILUSTRAÇÃO SEM FUNCIONAR ENTÃO
+EU MESMO ELABOREI UM CONJUNTO DE PERGUNTAS DIFERENTES MAS QUE 
+CONVERGEM PARA O MESMO OBJETIVO. SOMENTE NO MOMENTO DE ENVIAR FOI QUE 
+OBSERVEI QUE A ILUSTRAÇÃO ESTAVA COM NOVO LINK(FUNCIONANDO)
+
+
 Elabore um algoritmo que possa descobrir, através de perguntas e respostas, qual meio de transporte o usuário está pensando.
 O usuário deverá escolher uma das seguintes opções:
 
