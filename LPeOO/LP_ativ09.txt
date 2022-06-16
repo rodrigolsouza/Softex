@@ -1,0 +1,51 @@
+(*OBS: NESTE MÓDULO NÃO FOI DITO QUAL LINGUAGEM DE PROGRAMAÇÃO UTILIZAR E O MATERIAL DE APOIO SÓ APONTA PARA PSEUDOCÓDIGO OU PORTUGOL PORTANTO O ALGORITMO TALVEZ NÃO ESTEJA TÃO ENXUTO OU FÁCIL DE SE ENTENDER. ALGUMAS FORMAS DE DECLARAR 
+ATRIBUIR  VALORES PODEM ESTAR ERRADAS.*)
+
+
+Após uma prova de vestibular, uma escola quer identificar quantos dos seus alunos foram aprovados em cada turma de formandos. Ela quer saber qual aluno teve a maior nota e de qual turma ele é. Nessa escola, há quatro turmas (A, B, C e D) com vinte e cinco alunos cada.
+
+Elabore um algoritmo que solicite o nome e a nota do vestibular aos alunos. Depois, informe quantos deles foram aprovados, de que turma são, qual a maior nota em cada turma e qual aluno teve a maior nota de todas.
+
+Para que o aluno seja aprovado no vestibular, ele deverá obter nota maior ou igual a 7.
+
+ATENÇÃO: As notas por turma não podem se repetir.
+
+algoritmo "aprovados_vestibular"
+
+var 
+totalAlunos:inteiro
+tamanhoTurma:inteiro
+nomeAluno,turma:caractere
+notaAluno,maior,maior_por_turma:real
+turma[100]:caractere
+notas[100]:real
+aluno[100]: caractere
+situacao[100]: caractere
+
+inicio
+totalAlunos=100
+tamanhoTurma=0
+maior=0
+maior_por_turma=0
+
+Enquanto tamanhoTurma<totalAlunos faca 
+    Escreva("Qual o seu nome?")
+    Leia(nomeAluno)
+    Escreva("Qual a sua turma?")
+    Leia(turma)
+    Escreva("Qual a sua nota no vestibular?")
+    Leia(notaAluno)
+    se notaAluno>=7 entao 
+        situacao[tamanhoTurma]="aprovado"
+    senao
+        situacao[tamanhoTurma]="reprovado"
+    fimse
+    aluno[tamanhoTurma]=nomeAluno
+    turma[tamanhoTurma]=turma
+    notas[tamanhoTurma]=notaAluno
+    tamanhoTurma=tamanhoTurma+1
+fimenquanto
+
+
+
+    
