@@ -1,0 +1,112 @@
+Elabore um algoritmo que possa descobrir, através de perguntas e respostas, qual meio de transporte o usuário está pensando.
+O usuário deverá escolher uma das seguintes opções:
+
+- Trator
+- Moto
+- Bicicleta
+- Trem
+- Carro
+- Caminhão
+- Ônibus
+- Paraquedas
+- Balão
+- Avião
+- Helicóptero
+- Submarino
+- Barco
+- Navio
+- Lancha
+
+Para chegar ao resultado, só devem ser usadas perguntas que retornem "Sim" ou "Não".
+
+Exemplo:
+É terrestre? Sim.
+Cabe apenas uma pessoa? Sim.
+É pesado? Não.
+Tem pedal? Sim.
+Então, o transporte escolhido foi a bicicleta.
+
+Para chegar ao resultado de cada uma das opções, use o modelo ilustrado na imagem em anexo. 
+
+
+
+algoritmo "Transporte_pensado"
+
+Var
+
+Resposta: caracter
+
+Inicio
+
+Escreva("É terrestre?”)
+Se resposta="sim” entao
+	Escreval("Tem rodas?”)
+	Se resposta="sim" entao
+		Escreval("tem mais de 2 rodas?”)
+		Se resposta=”sim” entao
+			Escreval("É capaz de exercer altas trações?”)
+			Se resposta=”sim” então
+				Escreval("Então você está pensando no Trator")
+			Senao
+				Escreval("possui caçamba para transporte de cargas?”)
+				Se resposta=”sim” entao
+					Escreval("Então você está pensando no Caminhão")
+                Senao
+                    Escreval("Transporta muitas pessoas por vez?")
+                    Se resposta="sim" entao
+                        Escreval("Então você está pensando no onibus")
+                    Senao
+                        Escreval("Então você está pensando no carro")
+                    fimse
+                fimse
+            fimse
+        senao
+            Escreval("Necessita de habilitação para poder utilizar?")
+            se resposta="sim" entao
+                Escreval("Então você está pensando na moto")
+            senao
+                Escreval("Então você está pensando na bicicleta")
+            fimse
+        fimse
+    senao
+        Escreval("Então você está pensando no trem")
+    fimse
+senao
+    Escreval("É aereo?")
+    se resposta="sim" entao
+        Escreval("Possui motor eletromecânico?")
+        se resposta="sim" entao
+            Escreval("Possui turbinas?")
+            se resposta="sim" entao
+                Escreval("Então você está pensando no avião")
+            senao
+                Escreval("Então você está pensando no helicóptero")
+            fimse
+        senao
+            Escreval("Necessita de combustível para locomoção?")
+            se resposta="sim" entao
+                Escreval("Então você está pensando no balão")
+            senao
+                Escreval("Então você está pensando no paraquedas")
+            fimse
+        fimse
+    senao
+        Escreval("viaja submerso?")
+        se resposta="sim" entao
+            Escreval("Então você está pensando no submarino")
+        senao
+            Escreval("Pode transportar milhares de pessoas e cargas pesadas por vez?")
+            se resposta="sim" entao
+                Escreval("Então você está pensando no navio")
+            senao
+                Escreval("Possui versão sem motor?")
+                se resposta="sim" entao
+                    Escreval("Então você está pensando no barco")
+                senao
+                    Escreval("Então você está pensando na lancha")
+                fimse
+            fimse
+        fimse
+    fimse
+fimse
+fimalgoritmo
