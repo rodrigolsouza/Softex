@@ -12,39 +12,138 @@ ATENÇÃO: As notas por turma não podem se repetir.
 
 algoritmo "aprovados_vestibular"
 
-var 
-totalAlunos:inteiro
-tamanhoTurma:inteiro
-nomeAluno,turma:caractere
-notaAluno,maior,maior_por_turma:real
-turma[100]:caractere
-notas[100]:real
-aluno[100]: caractere
-situacao[100]: caractere
+
+tipo 
+registro_alunos=registro
+    turma:caractere
+    nome:caracter
+    nota:real
+    situacao:caracter
+fimregistro
+
+var
+dados_alunos[100]:registro_alunos
+totalAlunos,tamanhoTurma,iterador,buscador,aprovadosA,aprovadosB,aprovadosC,aprovadosD,totalAprovados:inteiro
+maior,maiorA,maiorB,maiorC,maiorD:real
+aluno_maior_nota:caracter
+turma_aluno_maior_nota:caractere
 
 inicio
-totalAlunos=100
-tamanhoTurma=0
-maior=0
-maior_por_turma=0
 
-Enquanto tamanhoTurma<totalAlunos faca 
-    Escreva("Qual o seu nome?")
-    Leia(nomeAluno)
+totalAlunos=100
+tamanhoTurmao=0
+maior=0
+maiorA=0
+maiorB=0
+maiorC=0
+maiorD=0
+aprovadosA=0
+aprovadosB=0
+aprovadosC=0
+aprovadosD=0
+totalAprovados=0
+aluno_maior_nota=""
+turma_aluno_maior_nota=""
+
+
+enquanto tamanhoTurma<totalAlunos faca
+
     Escreva("Qual a sua turma?")
-    Leia(turma)
+    Leia(dados_alunos[tamanhoTurma].turma)
+
+    Escreva("Qual o seu nome?")
+    Leia(dados_alunos[tamanhoTurma].nome)
+
     Escreva("Qual a sua nota no vestibular?")
-    Leia(notaAluno)
-    se notaAluno>=7 entao 
-        situacao[tamanhoTurma]="aprovado"
+    Leia(dados_alunos[tamanhoTurma].nota)
+
+    se dados_alunos[tamanhoTurma].nota>=7 entao 
+        dados_alunos[tamanhoTurma].situacao="aprovado"
     senao
-        situacao[tamanhoTurma]="reprovado"
+        dados_alunos[tamanhoTurma].situacao="reprovado"
     fimse
-    aluno[tamanhoTurma]=nomeAluno
-    turma[tamanhoTurma]=turma
-    notas[tamanhoTurma]=notaAluno
-    tamanhoTurma=tamanhoTurma+1
+
+    tamanhoTurma++
 fimenquanto
+
+para iterador de 1 ate totalAlunos faca
+    se dados_alunos[iterador].turma="A" entao
+        se dados_alunos[iterador].situacao="aprovado" entao
+            aprovadosA=aprovadosA+1
+            se dados_alunos[iterador].nota>maiorA entao
+                maiorA=dados_alunos[iterador].nota
+            fimse
+        fimse
+    
+    senao
+        se dados_alunos[iterador].turma="B" entao
+            se dados_alunos[iterador].situacao="aprovado" entao
+                aprovadosB=aprovadosB+1
+                se dados_alunos[iterador].nota>maiorB entao
+                    maiorB=dados_alunos[iterador].nota
+                fimse
+            fimse
+        fimse
+    
+    senao
+        se dados_alunos[iterador].turma="C" entao
+            se dados_alunos[iterador].situacao="aprovado" entao
+                aprovadosC=aprovadosC+1
+                se dados_alunos[iterador].nota>maiorC entao
+                    maiorC=dados_alunos[iterador].nota
+                fimse
+            fimse
+        fimse
+    
+    senao
+        se dados_alunos[iterador].turma="D" entao
+            se dados_alunos[iterador].situacao="aprovado" entao
+                aprovadosD=aprovadosD+1
+                se dados_alunos[iterador].nota>maiorD entao
+                    maiorD=dados_alunos[iterador].nota
+                fimse
+            fimse
+        fimse
+    fimse
+fimpara
+
+se maiorA>maiorB e maiorA>maiorC e maiorA>maiorD entao
+    maior=maiorA
+senao
+    se maiorB>maiorC e maiorB>maiorD entao
+        maior=maiorB
+    senao
+        se maiorC>maiorD entao
+            maior=maiorC
+        senao
+            maior=maiorD
+        fimse
+    fimse
+fimse
+
+totalAprovados=aprovadosA+aprovadosB+aprovadosC+aprovadosD
+
+para buscador de 1 ate totalAlunos faca
+    se dados_alunos[buscador].nota=maior entao
+        aluno_maior_nota=dados_alunos[buscador].nome
+        turma_aluno_maior_nota=dados_alunos[buscador].turma
+    fimse
+fimpara
+
+escreval("A escola teve",totalAprovados," alunos aprovados no vestibular dos quais:" )
+escreval(aprovadosA," alunos foram da turma A")
+escreval(aprovadosB," alunos foram da turma B")
+escreval(aprovadosC," alunos foram da turma C")
+escreval(aprovadosD," alunos foram da turma D")
+escreval("A maior nota na turma A foi: ",maiorA)
+escreval("A maior nota na turma B foi: ",maiorB)
+escreval("A maior nota na turma C foi: ",maiorC)
+escreval("A maior nota na turma D foi: ",maiorD)
+escreval("O aluno da escola que obteve a maior nota de todas foi: ",aluno_maior_nota, "da turma ",turma_aluno_maior_nota)
+
+fimalgoritmo
+
+
 
 
 

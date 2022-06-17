@@ -44,7 +44,7 @@ algoritmo "Transporte_pensado"
 
 Var
 
-Resposta: caractere
+Resposta: caracter
 
 Inicio
 
