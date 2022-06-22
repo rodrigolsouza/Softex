@@ -1,0 +1,57 @@
+/******************************************************************************
+
+Faça um algoritmo de ordenação utilizando o método bubble sort na linguagem C.
+Para isso, você deve criar um método em que o tamanho do vetor seja dez e deve estar 
+em ordem crescente.
+
+O vetor deverá:
+- comparar seus elementos dois a dois adjacentes;
+- se os elementos não estiverem em ordem, então ordenar;
+- senão, avançar para o próximo par;
+- repetir a operação até que nenhuma troca possa ser feita no vetor inteiro.
+*******************************************************************************/
+#include <stdio.h>
+#include <stdlib.h>
+#define TAMANHO 10
+void imprimirVetor();
+void ordenadorBubbleSort();
+
+void main()
+{
+    int vetor[TAMANHO]={4,67,33,21,75,89,93,17,45,5};
+    
+    printf("vetor desordenado:\n");
+    imprimirVetor(vetor);
+    
+    printf("\nvetor ordenado:\n");
+    ordenadorBubbleSort(vetor);
+    imprimirVetor(vetor);
+    return;
+}
+
+void imprimirVetor(int vetor[TAMANHO]){
+    int iterador;
+    printf("[");
+    for (iterador=0;iterador<TAMANHO;iterador++){
+        printf("%4d", vetor[iterador]);
+    }
+    printf("]");
+    
+    return;
+}
+
+void ordenadorBubbleSort(int vetor[TAMANHO]){
+    int temp,contador,iterador;
+    for(contador=1;contador<TAMANHO;contador++){
+        for(iterador=0;iterador<TAMANHO-1;iterador++){
+            if(vetor[iterador]>vetor[iterador+1]){
+                temp=vetor[iterador];
+                vetor[iterador]=vetor[iterador+1];
+                vetor[iterador+1]=temp;
+            }
+        }
+            
+    }
+   return;
+}
+

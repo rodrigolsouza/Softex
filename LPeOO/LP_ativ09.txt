@@ -63,7 +63,7 @@ enquanto tamanhoTurma<totalAlunos faca
         dados_alunos[tamanhoTurma].situacao="reprovado"
     fimse
 
-    tamanhoTurma++
+    tamanhoTurma=tamanhoTurma+1
 fimenquanto
 
 para iterador de 1 ate totalAlunos faca
