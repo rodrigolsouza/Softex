@@ -1,1 +1,17 @@
 Pesquise sobre os grafos e apresente dois exemplos de como são utilizados no contexto tecnológico.
+*****************************************************************************************************
+EXEMPLO 1:
+
+O Grupo Meta(dono do Facebook, Instragram e Whatsapp) usa a teoria de grafos (tanto no Facebook quanto no Instagram) através de uma malha criada entre os amigos de um determinado usuário que também possui amigos e dessa forma esses programas criam mecanismos de sugestão/recomendação de amigos. 
+
+O linkedIn também utiliza a teoria de grafos incluindo inclusive os graus de proximidade
+
+Na verdade, todo esse sistema de recomendação é bem mais poderoso e é utilizado não só para "linkar" usuários de uma rede social mas para oferecer produtos e serviços numa espécie de advinhação das necessidades de um indivíduo.
+
+EXEMPLO 2:
+
+No campo das redes neurais/Inteligência artificial existem as aplicações dos grafos em sistemas euclidianos(para a formação de textos,imagens e sons) e as aplicações em grupos não-euclidianos.
+
+Nesse grupo de tipos de dados não-euclidianos encontram-se as redes neurais para grafos que são arquiteturas de Redes Neurais Profundas que recebem como entrada um grafo. Elas são utilizadas para classificação ou geração de grafos, arestas e vértices, reconhecimento de padrões em grafos, agrupamento por semelhança de estruturas que podem ser representadas em grafos, entre outras tarefas.
+
+Nesse caso as aplicações são diversas, desde a composição e classificação de estruturas moleculares (na geração de novos medicamentos, por exemplo), até o reconhecimento de padrões em redes sociais.
