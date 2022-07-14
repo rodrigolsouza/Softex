@@ -20,10 +20,27 @@ def divisão(num1,num2):
     if num2!=0:
         resultado= num1/num2
     else:
-        resultado= print("o segundo número não pode ser igual a zero")
+        resultado= print("o segundo número não pode ser igual a zero. Tente novamente")
     return resultado
 
 def calculadora(num1,num2,operador):
-    switch(operador) {
-        "+":soma(num1,num2)
-    }
+    match (operador):
+        case '+':
+            return soma(num1,num2)
+        case'-':
+            return subtração(num1,num2)
+        case'*':
+            return multiplicação(num1,num2)
+        case '/':
+            return divisão(num1,num2)
+        case _:
+            return 0
+
+print("Digite dois número e a sinal de operação que deseja efetuar")
+num1=int(input("Número 1: "))
+num2=int(input("Número 2: "))
+operador=input("Operador matemático: ")
+
+resposta=calculadora(num1,num2,operador)
+print(resposta)
+        
