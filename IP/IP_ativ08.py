@@ -6,6 +6,14 @@
 
 Caso seja inserido um número de operação que não exista, o resultado deverá ser 0.'''
 
+def exibir_menu():
+    print("\n")
+    print("---------MENU-----------")
+    menudeopções=["Efetuar soma", "Efetuar subtração", "Efetuar multiplicação","Efetuar divisão"]
+    for numero,opção in enumerate(menudeopções):
+        print(numero+1, "-",opção)
+    print("------------------------")
+
 def soma(num1,num2):
     return num1+num2
 
@@ -23,24 +31,24 @@ def divisão(num1,num2):
         resultado= print("o segundo número não pode ser igual a zero. Tente novamente")
     return resultado
 
-def calculadora(num1,num2,operador):
-    match (operador):
-        case '+':
+def calculadora(num1,num2,opção):
+    match (opção):
+        case 1:
             return soma(num1,num2)
-        case'-':
+        case 2:
             return subtração(num1,num2)
-        case'*':
+        case 3:
             return multiplicação(num1,num2)
-        case '/':
+        case 4:
             return divisão(num1,num2)
         case _:
             return 0
 
-print("Digite dois número e a sinal de operação que deseja efetuar")
+print("Digite dois número")
 num1=int(input("Número 1: "))
 num2=int(input("Número 2: "))
-operador=input("Operador matemático: ")
-
-resposta=calculadora(num1,num2,operador)
+exibir_menu()
+opção=int(input("digite a operação desejada: "))
+resposta=calculadora(num1,num2,opção)
 print(resposta)
         
