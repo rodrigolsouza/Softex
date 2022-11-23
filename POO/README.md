@@ -1,0 +1,1 @@
+As atividades deste módulo estão numeradas de acordo com cada fase da trilha. Assim, aqui apenas existem os exercícios relativos a ativadedes code park do curso em trilha. Todas as atividades possuem o enunciado no início da mesma.
